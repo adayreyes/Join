@@ -4,7 +4,7 @@ body {
 }
 
 header {
-    width: 20%;
+    width: 200px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -17,6 +17,7 @@ header {
     display: flex;
     flex-direction: column;
     margin-top: 40px;
+    width: 100%;
     gap: 60px;
 }
 
@@ -24,22 +25,40 @@ header {
     display: flex;
     justify-content: center;
     width: 100%;
+    padding: 0 5px;
 }
 
 .navbar {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .link-container {
     margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .link-container a {
     color: white;
+    width: 65%;
     text-decoration: none;
     font-size: 20px;
+    
+    
+}
+.link-border{
+    width: 4px;
+    height: 100%;
+    background-color: transparent;
+    transition: all 100ms ease-in-out;
+}
+
+.link-container:hover .link-border{
+    background-color: white;
 }
 
 .user-img-container {
@@ -54,4 +73,8 @@ header {
     width: 100%;
     object-fit: cover;
     border-radius: 100%;
+}
+
+.board{
+    background-color: white;
 }
