@@ -1,0 +1,23 @@
+main{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.board-sub-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.task-board{
+    width: 300px;
+    height: 800px;
+    background-color: var(--task-bg);
+}
+
+.task-headline{
+    font-weight: bold;
+    font-size: 20px
+}

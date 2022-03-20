@@ -1,6 +1,13 @@
+:root{
+    --bg1:rgba(40, 124, 250, 0.685);
+    --task-bg: lightgrey;
+
+}
+
 body {
     margin: 0;
     font-family: 'PT Sans', sans-serif;
+    display: flex;
 }
 
 header {
@@ -10,7 +17,7 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(40, 124, 250, 0.685);
+    background-color:var(--bg1);
     position: relative;
 }
 .nav-main-container{
@@ -55,3 +62,4 @@ header {
     object-fit: cover;
     border-radius: 100%;
 }
+
