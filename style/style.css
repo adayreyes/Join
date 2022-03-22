@@ -1,6 +1,7 @@
 :root{
-    --bg1:rgba(40, 124, 250, 0.685);
-    --task-bg: lightgrey;
+    --bg1:#1E3190;
+    --main-bg: #F4F3FB;
+    --margin-header: 75px;
 
 }
 
@@ -11,7 +12,7 @@ body {
 }
 
 header {
-    width: 200px;
+    min-width: 200px;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -19,6 +20,7 @@ header {
     justify-content: space-between;
     background-color:var(--bg1);
     position: relative;
+    
 }
 .nav-main-container{
     display: flex;
@@ -56,6 +58,7 @@ header {
     font-size: 20px;
     
     
+    
 }
 .link-border{
     width: 4px;
@@ -82,6 +85,18 @@ header {
     border-radius: 100%;
 }
 
-.board{
+.board-link{
     background-color: white;
+}
+
+
+
+.font-title{
+    font-weight: bold;
+    color: var(--bg1);
+}
+
+.font-small{
+    font-size: .8rem;
+    color: var(--bg1);
 }
