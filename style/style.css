@@ -11,7 +11,7 @@ body {
     display: flex;
 }
 
-header {
+.main-header {
     min-width: 200px;
     height: 100vh;
     display: flex;
