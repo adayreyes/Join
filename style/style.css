@@ -97,7 +97,9 @@ body {
     background-color: white;
 }
 
-
+.section-header{
+    padding: 2rem;
+}
 
 .font-title{
     font-weight: bold;
@@ -107,4 +109,5 @@ body {
 .font-small{
     font-size: .8rem;
     color: var(--bg1);
+    font-weight: bold;
 }
