@@ -9,16 +9,81 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .task-board{
-    width: 300px;
+    width: 365px;
     height: 800px;
     background-color: var(--main-bg);
+    display: flex;
+    justify-content: center;
     
 }
 
 .task-headline{
     font-weight: bold;
     font-size: 20px
+}
+
+/* Hier die Klassen für die zugeteile Aufgabe im Board */
+
+.person-logo{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.task{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 170px;
+    width: 330px;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.task-color{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 5px;
+    bottom: 0px;
+    background-color: orange;
+    border-radius: 8px 0px 0px 8px;
+}
+
+.task-person{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 18px;
+}
+
+.task-sub-container{
+    padding: 15px;
+}
+
+.category{
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    width: 100px;
+    align-items: center;
+    height: 30px;
+    background-color: var(--bg1);
+    color: white;
+}
+
+.task-date span{
+    font-size: 12px;
+    color: rgb(156, 156, 156);
+}
+
+.task-description{
+    font-weight: bold;
 }
