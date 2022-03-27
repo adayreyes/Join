@@ -8,6 +8,7 @@
     <title>Join-Project</title>
 
     <script src="script/script.js"></script>
+    <script src="script/board.js"></script>
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/board.css">
 
@@ -17,7 +18,7 @@
         rel="stylesheet">
 </head>
 
-<body onload="includeHTML()">
+<body onload="includeHTML(), init()">
 
 
     <header class="main-header" w3-include-html="templates/header.html"></header>
@@ -26,24 +27,7 @@
     <main>
         <div class="board-sub-container">
             <span class="task-headline">TO DO</span>
-            <div class="task-board">
-
-                <div class="task">
-
-                    <div class="task-sub-container">
-
-                        <div class="task-date"><span>24.03.2022</span></div>
-                        <div class="task-description"><span>Prepare presentation</span></div>
-                        <div class="description-details"><span>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Officiis, officia. .</span></div>
-                        <div class="task-person">
-                            <div class="category"><span>Marketing</span></div>
-                            <img class="person-logo" src="img/profile.png" alt="">
-                        </div>
-
-                    </div>
-                </div>
-
+            <div class="task-board" id="task-board">
 
             </div>
         </div>

@@ -18,7 +18,8 @@ main{
     height: 800px;
     background-color: var(--main-bg);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     
 }
 
@@ -86,7 +87,7 @@ main{
     color: rgb(156, 156, 156);
 }
 
-.task-description{
+.task-title{
     font-weight: bold;
 }
 .board-link{
