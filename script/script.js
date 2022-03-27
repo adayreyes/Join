@@ -5,7 +5,7 @@ let users = [
 ];
 let tasks = [
   {
-    'id': 0,
+    id: 0,
     title: "Youtube Werbung",
     category: "Marketing",
     description: "Werbungskosten ausrechnen",
@@ -15,7 +15,7 @@ let tasks = [
     assigned: [users[0],users[1],users[2]]
   },
   {
-    'id': 1,
+    id: 1,
     title: "Windows installieren",
     category: "IT",
     description: "Windows 11 muss unbedingt installiert werden",
