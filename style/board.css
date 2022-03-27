@@ -45,6 +45,8 @@ main{
     width: 330px;
     margin-top: 20px;
     background-color: white;
+    border-radius: 8px;
+    border-left: 8px solid orange;
 
 }
 
@@ -67,7 +69,6 @@ main{
 
 .task-sub-container{
     padding: 15px;
-    border-left: 8px solid orange;
     border-radius: 8px;
 }
 

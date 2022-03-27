@@ -1,6 +1,13 @@
 let currentDraggedElement;
 
-function updateHTML() {
+function init(){
+    updateToDo();
+    updateInProgress();
+    updateTesting();
+    updateDone();
+}
+
+function updateToDo(){
     let todo = tasks.filter(t => t['status'] == 'to-do');
 
     document.getElementById('to-do').innerHTML = '';
@@ -10,7 +17,9 @@ function updateHTML() {
         document.getElementById('to-do').innerHTML += generateToDoHTML(i, element);
         renderTasks(i);
     }
+}
 
+function updateInProgress(){
     let inprogress = tasks.filter(t => t['status'] == 'in-progress');
 
     document.getElementById('in-progress').innerHTML = '';
@@ -20,7 +29,9 @@ function updateHTML() {
         document.getElementById('in-progress').innerHTML += generateToDoHTML(i, element);
         renderTasks(i);
     }
+}
 
+function updateTesting(){
     let testing = tasks.filter(t => t['status'] == 'testing');
 
     document.getElementById('testing').innerHTML = '';
@@ -30,7 +41,9 @@ function updateHTML() {
         document.getElementById('testing').innerHTML += generateToDoHTML(i, element);
         renderTasks(i);
     }
+}
 
+function updateDone(){
     let done = tasks.filter(t => t['status'] == 'done');
 
     document.getElementById('done').innerHTML = '';
@@ -68,7 +81,7 @@ function allowDrop(ev) {
 
 function moveTo(status){
     tasks[currentDraggedElement]['status'] = status;
-    updateHTML();
+    init();
 }
 
 function renderTasks(i) {
