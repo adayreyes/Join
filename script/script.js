@@ -1,7 +1,7 @@
 let users = [
-  { name: "Aday", email: "adadda@gmail.com", img: "img/icon plus.png" },
-  { name: "Tim", email: "timtitm@gmail.com", img: "img/icon plus.png" },
-  { name: "Eugen", email: "eegegen@gmail.com", img: "img/icon plus.png" }
+  { name: "Aday", email: "adadda@gmail.com", img: "img/profile.png" },
+  { name: "Tim", email: "timtitm@gmail.com", img: "img/profile.png" },
+  { name: "Eugen", email: "eegegen@gmail.com", img: "img/profile.png" }
 ];
 let tasks = [
   {
