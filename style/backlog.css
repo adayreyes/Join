@@ -68,3 +68,6 @@ main{
 .sales{
     border-left: 8px solid rgb(255, 0, 0);
 }
+.backlog-link{
+    background-color: white;
+}
