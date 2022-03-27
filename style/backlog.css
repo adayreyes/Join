@@ -15,6 +15,9 @@ main{
 .backlog-header span:last-child{
     text-align: right;
 }
+.backlog-task p:last-child{
+    text-align: right;
+}
 
 .backlog-list{
     display: flex;

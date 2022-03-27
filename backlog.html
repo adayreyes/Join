@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/backlog.css">
     <script src="./script/script.js"></script>
+    <script src="./script/backlog.js"></script>
 </head>
-<body onload="includeHTML()">
+<body onload="start()">
     <header class="main-header" w3-include-html="templates/header.html"></header>
     <main>
         <header class="section-header">
@@ -22,7 +23,7 @@
                 <span class="font-title">CATEGORY</span>
                 <span class="font-title">DETAILS</span>
             </header>
-            <section class="backlog-list">
+            <section class="backlog-list" id="backlog-list">
                 <div class="backlog-task sales">
                     <div class="assigned-to">
                         <img src="./img/profile.png" alt="">
