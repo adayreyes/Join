@@ -18,7 +18,7 @@
         rel="stylesheet">
 </head>
 
-<body onload="includeHTML(), init()">
+<body onload="includeHTML(), updateHTML()">
 
 
     <header class="main-header" w3-include-html="templates/header.html"></header>
@@ -27,28 +27,28 @@
     <main>
         <div class="board-sub-container">
             <span class="task-headline">TO DO</span>
-            <div class="task-board" id="task-board">
+            <div class="task-board" id="to-do" ondrop="moveTo('to-do'); removeHighlight(id)" ondragleave="removeHighlight('to-do')" ondragover="allowDrop(event); highlight('open')">
 
             </div>
         </div>
 
         <div class="board-sub-container">
             <span class="task-headline">IN PROGRESS</span>
-            <div class="task-board">
+            <div class="task-board" id="in-progress" ondrop="moveTo('in-progress'); removeHighlight(id)" ondragleave="removeHighlight('in-progress')" ondragover="allowDrop(event); highlight('in-progress')">
 
             </div>
         </div>
 
         <div class="board-sub-container">
             <span class="task-headline">TESTING</span>
-            <div class="task-board">
+            <div class="task-board" id="testing" ondrop="moveTo('testing'); removeHighlight(id)" ondragleave="removeHighlight('testing')" ondragover="allowDrop(event); highlight('testing')">
 
             </div>
         </div>
 
         <div class="board-sub-container">
             <span class="task-headline">DONE</span>
-            <div class="task-board">
+            <div class="task-board" id="done" ondrop="moveTo('done'); removeHighlight(id)"  ondragleave="removeHighlight('done')" ondragover="allowDrop(event); highlight('done')">
 
             </div>
         </div>

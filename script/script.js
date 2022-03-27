@@ -5,19 +5,23 @@ let users = [
 ];
 let tasks = [
   {
+    'id': 0,
     title: "Youtube Werbung",
     category: "Marketing",
     description: "Werbungskosten ausrechnen",
     date: "12.03.2022",
     urgency: "low",
+    status: "to-do",
     assigned: [users[0],users[1],users[2]]
   },
   {
+    'id': 1,
     title: "Windows installieren",
     category: "IT",
     description: "Windows 11 muss unbedingt installiert werden",
     date: "10.03.2022",
     urgency: "high",
+    status: "in-progress",
     assigned: [users[1],users[2]]
   }
 ];

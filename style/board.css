@@ -93,3 +93,7 @@ main{
 .board-link{
     background-color: white;
 }
+
+.drag-area-highlight{
+    background-color: #a4a4a7;
+}
