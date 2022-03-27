@@ -16,7 +16,7 @@ function renderTemplate() {
                 Officiis, officia. .</span></div>
             <div class="task-person">
             <div class="category"><span id="task-category-${i}">Marketing</span></div>
-            <img class="person-logo id="person-logo-${i}" src="img/profile.png" alt="">
+            <img class="person-logo" id="person-logo-${i}" src="img/profile.png" alt="">
             </div>
         </div>
     </div>`;
@@ -31,5 +31,5 @@ function renderTasks(i) {
         document.getElementById(`title-${i}`).innerHTML = tasks[i]['title'];
         document.getElementById(`task-description-${i}`).innerHTML = tasks[i]['description'];
         document.getElementById(`task-category-${i}`).innerHTML = tasks[i]['category'];
-     // funktioniert noch nicht   document.getElementById(`person-logo-${i}`).src = tasks[i]['assigned'][0]['img'];
+        document.getElementById(`person-logo-${i}`).src = tasks[i]['assigned'][0]['img'];
 } 
