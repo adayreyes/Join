@@ -59,15 +59,7 @@ main{
 .category{
     margin-left: 1rem;
 }
-.marketing{
-    border-left: 8px solid orange;
-}
-.it{
-    border-left: 8px solid rgb(8, 42, 153);
-}
-.sales{
-    border-left: 8px solid rgb(255, 0, 0);
-}
+
 .backlog-link{
     background-color: white;
 }

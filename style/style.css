@@ -106,3 +106,13 @@ body {
     color: var(--bg1);
     font-weight: bold;
 }
+
+.priority-normal{
+    border-left: 8px solid orange;
+}
+.priority-low{
+    border-left: 8px solid green;
+}
+.priority-high{
+    border-left: 8px solid red;
+}
