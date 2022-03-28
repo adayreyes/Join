@@ -40,7 +40,7 @@ function addNumberOfAssigned(i) {
 
 function taskCardTemplate(i) {
   return `
-    <div class="backlog-task priority-${tasks[i]["urgency"].toLowerCase()}">
+    <div onclick="showBacklogTask(${i})" class="backlog-task priority-${tasks[i]["urgency"].toLowerCase()}">
     <div class="assigned-to" id="assigned-to-container(${i})">
     <img src="${tasks[i]["assigned"][0]["img"]}" alt="">
     <div class="name-container">
@@ -64,3 +64,8 @@ function taskCardTemplate(i) {
     </div>
     ` 
 } */
+
+function showBacklogTask(i){
+    let big_container = document.getElementById("big-task-container");
+    big_container.classList.remove("d-none");
+}

@@ -2,6 +2,7 @@ main{
     display: flex;
     flex-direction: column;
     width: 100%;
+    position: relative;
 }
 .backlog-header{
     display: flex;
@@ -34,7 +35,12 @@ main{
     align-items: center;
     width: 100%;
     justify-content: space-between;
-    
+    cursor: pointer;
+    transition: all 100ms ease-in-out; 
+}
+
+.backlog-task:hover{
+    background-color: rgb(228, 228, 228);
 }
 .backlog-task > *{
     width: 300px;
@@ -70,4 +76,19 @@ main{
 
 .backlog-text{
     color: white!important;
+}
+.big-task-container{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    flex-wrap: wrap;
+    padding: 2rem;
+}
+.d-none{
+    display: none;
 }
