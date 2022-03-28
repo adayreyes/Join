@@ -3,6 +3,7 @@
 }
 
 .addTask-section {
+    position: relative;
     background-color: var(--main-bg);
     display: flex;
     flex-direction: column;
@@ -25,8 +26,10 @@
 
 .input-field {
     width: 300px;
-    height: 2.5rem;
+    height: 50px;
     border: none;
+    font-size: 16px;
+    padding-left: 20px;
 }
 
 .input-icon-div {
@@ -35,14 +38,16 @@
 }
 
 .input-field-icon {
-    width: calc(300px - 2.5rem);
-    height: 2.5rem;
+    width: 250px;
+    height: 50px;
     border: none;
+    font-size: 16px;
+    padding-left: 20px;
 }
 
 .icon-div{
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 50px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -57,10 +62,68 @@
     object-fit: contain;
 }
 
+
+/* https://fabriceleven.com/design/clever-way-to-change-the-drop-down-selector-arrow-icon/ */
+
+.selectdiv {
+  position: relative;
+  /*Don't really need this just for demo styling*/
+  min-width: 300px;
+  height: 2.5rem;
+  float: left;
+}
+
+.selectdiv:after {
+    content: '\f078';
+    font: normal normal normal 17px/1 FontAwesome;
+    color: rgba(128, 128, 128, 0.692);
+    right: 15px;
+    top: 6px;
+    height: 34px;
+    padding: 15px 0px 0px 12px;
+    border-left: 2px solid rgba(128, 128, 128, 0.233);
+    position: absolute;
+    pointer-events: none;
+}
+
+/* IE11 hide native button:*/ 
+select::-ms-expand {
+display: none;
+}
+
+.selectdiv select {
+  /* Removes the default select arrow: */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Add some styling */
+  
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  height: 50px;
+  float: right;
+  margin: 5px 0px;
+  padding: 0px 24px;
+  font-size: 16px;
+  line-height: 1.75;
+  color: #333;
+  background-color: #ffffff;
+  background-image: none;
+  -ms-word-break: normal;
+  word-break: normal;
+  border: 2px solid rgba(128, 128, 128, 0.233);
+  border-radius: 5px;
+}
+
+/* ############################## */
+
 #description {
     width: 300px;
     height: 8rem;
     resize: none;
+    font-size: 16px;
+    padding: 5px 10px 5px 10px;
 }
 
 .assigned-div {
@@ -119,9 +182,45 @@
     background-color: white;
 }
 
+.hide {
+  display: none!important;
+}
 
+.div-assign-select {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #85848ab0;
+  
+}
 
+.div-assign-select .img-people {
+  background-color: white;
+  padding: 50px 100px 50px 100px;
+  border-radius: 15px;
+  z-index: 3;
+}
 
+.div-left-select {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.profil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
 
 
 

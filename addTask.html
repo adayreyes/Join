@@ -2,84 +2,101 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Task</title>
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/addTask.css">
-    <script src="script/script.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Task</title>
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/addTask.css">
+  <!-- Font-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="script/script.js"></script>
+  <script src="script/addTask.js"></script>
 </head>
 
-<body onload="includeHTML()">
-    <header class="main-header" w3-include-html="templates/header.html"></header>
-    <main class="main-addTask">
-        <header class="section-header">
-            <h1>Add Task</h1>
-            <span class="font-small">Learning Management System Project</span>
-        </header>
-        <section class="addTask-section">
-            <div class="row-input">
-                <div class="input-div">
-                    <span class="font-title">TITLE</span>
-                    <input type="text" id="title-input" class="input-field input-border">
-                </div>
+<body onload="init()">
+  <header class="main-header" w3-include-html="templates/header.html"></header>
+  <main class="main-addTask">
+    <header class="section-header">
+      <h1>Add Task</h1>
+      <span class="font-small">Learning Management System Project</span>
+    </header>
 
-                <div class="input-div">
-                    <span class="font-title">DUE DATE</span>
-                    <div class="input-icon-div input-border">
-                        <input type="text" id="date-input" class="input-field-icon">
-                        <div class="icon-div button-hover">
-                            <img src="img/icons8-calendar-150.png">
-                        </div>
-                    </div>
-                </div>
+    <section class="addTask-section">
+      <div class="row-input">
+        <div class="input-div">
+          <span class="font-title">TITLE</span>
+          <input type="text" id="title-input" class="input-field input-border">
+        </div>
+
+        <div class="input-div">
+          <span class="font-title">DUE DATE</span>
+          <div class="input-icon-div input-border">
+            <input type="text" id="date-input" class="input-field-icon">
+            <div class="icon-div button-hover">
+              <img src="img/icons8-calendar-150.png">
             </div>
+          </div>
+        </div>
+      </div>
 
-            <div class="row-input">
-                <div class="input-div">
-                    <span class="font-title">CATEGORY</span>
-                    <div class="input-icon-div input-border">
-                        <input type="text" id="category-input" class="input-field-icon">
-                        <div class="icon-div button-hover">
-                            <img src="img/chevron .png">
-                        </div>
-                    </div>
-                </div>
+      <div class="row-input">
+        <div class="input-div">
+          <span class="font-title">CATEGORY</span>
+          <div class="selectdiv">
+            <label>
+              <select id="category">
+                <option value='Work' selected> Work </option>
+                <option value='Marketing'>Marketing</option>
+                <option value='IT'>IT</option>
+              </select>
+            </label>
+          </div>
+        </div>
 
-                <div class="input-div">
-                    <span class="font-title">URGENCY</span>
-                    <div class="input-icon-div input-border">
-                        <input type="text" id="urgency-input" class="input-field-icon">
-                        <div class="icon-div button-hover">
-                            <img src="img/chevron .png">
-                        </div>
-                    </div>
-                </div>
+        <div class="input-div">
+          <span class="font-title">URGENCY</span>
+          <div class="selectdiv">
+            <label>
+              <select id="urgency">
+                <option value='Normal' selected> Normal </option>
+                <option value='Low'>Low</option>
+                <option value='High'>High</option>
+                <option value='Very High'>Very High</option>
+              </select>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row-input">
+        <div class="input-div">
+          <span class="font-title">DESCRIPTION</span>
+          <textarea id="description" class="input-border"></textarea>
+        </div>
+
+        <div class="input-div">
+          <span class="font-title">ASSIGNED TO</span>
+          <div class="assigned-div">
+            <div class="img-people" id="task-User">
             </div>
-
-            <div class="row-input">
-                <div class="input-div">
-                    <span class="font-title">DESCRIPTION</span>
-                    <textarea  id="description" class="input-border"></textarea>
-                </div>
-                
-                <div class="input-div">
-                    <span class="font-title">ASSIGNED TO</span>
-                    <div class="assigned-div">
-                        <div class="img-people">
-                            <img src="img/profile.png" class="round-img">
-                            <img src="img/icon plus.png" class="img-add-people button-hover">
-                        </div>
-                        <div class="buttons">
-                            <div class="cancle-button font-title button-hover">CANCLE</div>
-                            <div class="task-button button-hover">CREATE TASK</div>
-                        </div>
-                    </div>
-                </div>
+            <div class="buttons">
+              <div class="cancle-button font-title button-hover" onclick="resetAddTask()">CANCLE</div>
+              <div class="task-button button-hover" onclick="createTask()">CREATE TASK</div>
             </div>
-        </section>
-    </main>
+          </div>
+        </div>
+      </div>
+
+      <section class="div-assign-select hide" id="section-select">
+        <div onclick="hideProfileSelect()" class="div-left-select"></div>
+        <div class="img-people" id="select-User">
+        </div>
+      </section>
+    </section>
+
+
+  </main>
 </body>
 
 </html>
