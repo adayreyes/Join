@@ -94,6 +94,9 @@ main{
 .board-link{
     background-color: white;
 }
+.board-text{
+    color: white!important;
+}
 
 .drag-area-highlight{
     background-color: #a4a4a7;

@@ -60,7 +60,7 @@ body {
 }
 
 .link-container a {
-    color: white;
+    color: rgba(209, 209, 209, 0.815);
     width: 65%;
     text-decoration: none;
     font-size: 20px;  
@@ -71,6 +71,7 @@ body {
     background-color: transparent;
     transition: all 100ms ease-in-out;
 }
+
 
 .link-container:hover .link-border{
     background-color: white;

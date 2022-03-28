@@ -63,3 +63,7 @@ main{
 .backlog-link{
     background-color: white;
 }
+
+.backlog-text{
+    color: white!important;
+}

@@ -181,6 +181,9 @@ display: none;
 .addTask-link{
     background-color: white;
 }
+.addTask-text{
+    color: white!important;
+}
 
 .hide {
   display: none!important;
