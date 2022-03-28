@@ -109,11 +109,11 @@ body {
 }
 
 .priority-normal{
-    border-left: 8px solid orange;
+    border-left: 8px solid orange !important;
 }
 .priority-low{
-    border-left: 8px solid green;
+    border-left: 8px solid green !important;
 }
 .priority-high{
-    border-left: 8px solid red;
+    border-left: 8px solid red !important;
 }

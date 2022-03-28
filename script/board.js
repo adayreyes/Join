@@ -5,6 +5,7 @@ function init() {
     updateInProgress();
     updateTesting();
     updateDone();
+    addPriority();
 }
 
 function updateToDo() {
@@ -15,6 +16,7 @@ function updateToDo() {
     for (let i = 0; i < todo.length; i++) {
         const element = todo[i];
         document.getElementById('to-do').innerHTML += generateToDoHTML(i, element);
+        //    addPriority(i, element);
     }
 }
 
@@ -26,6 +28,7 @@ function updateInProgress() {
     for (let i = 0; i < inprogress.length; i++) {
         const element = inprogress[i];
         document.getElementById('in-progress').innerHTML += generateToDoHTML(i, element);
+        //   addPriority(i, element);
     }
 }
 
@@ -37,6 +40,7 @@ function updateTesting() {
     for (let i = 0; i < testing.length; i++) {
         const element = testing[i];
         document.getElementById('testing').innerHTML += generateToDoHTML(i, element);
+        //   addPriority(i, element);
     }
 }
 
@@ -48,11 +52,12 @@ function updateDone() {
     for (let i = 0; i < done.length; i++) {
         const element = done[i];
         document.getElementById('done').innerHTML += generateToDoHTML(i, element);
+        //  addPriority(i, element);
     }
 }
 
 function generateToDoHTML(i, element) {
-    return `<div class="task" draggable="true" ondragstart="startDragging(${element['id']})">
+    return `<div class="task" draggable="true" ondragstart="startDragging(${element['id']})" id="task-${element['id']}">
     <div class="task-sub-container">
         <div class="task-date"><span id="date-${i}">${element['date']}</span></div>
         <div class="task-title"><span id="title-${i}">${element['title']}</span></div>
@@ -84,4 +89,23 @@ function highlight(id) {
 
 function removeHighlight(id) {
     document.getElementById(id).classList.remove('drag-area-highlight');
+}
+
+
+function addPriority() {
+
+    for (let i = 0; i < tasks.length; i++) {
+        if (tasks[i]['urgency'] == 'low') {
+            document.getElementById(`task-${i}`).classList.add('priority-low');
+        }
+        if (tasks[i]['urgency'] == 'normal') {
+            document.getElementById(`task-${i}`).classList.add('priority-normal');
+        }
+        if (tasks[i]['urgency'] == 'high') {
+            document.getElementById(`task-${i}`).classList.add('priority-high');
+        }
+
+
+    }
+
 }
