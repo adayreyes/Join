@@ -46,6 +46,10 @@ main{
     align-items: center;
     gap: 1rem; 
 }
+.name-container {
+    display: flex;
+    flex-direction: column;
+}
 .name-container a{
     text-decoration: none;
     color: rgb(0, 118, 253);
