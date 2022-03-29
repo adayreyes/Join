@@ -12,9 +12,15 @@ function renderTasks() {
 
 function addTaskContainer(backlog) {
   for (let i = 0; i < tasks.length; i++) {
-    backlog.innerHTML += taskCardTemplate(i);
-    /*  addAssignedToSection(i); */
-    addNumberOfAssigned(i);
+    if(tasks[i]['status'] == ""){
+      backlog.innerHTML += taskCardTemplate(i);
+
+      if(tasks[i]['assigned'].length > 0){
+        let assigned_container = document.getElementById(`assigned-to-container(${i})`);
+        assigned_container.innerHTML += assignedToTemplate(i);
+        addNumberOfAssigned(i);
+      }
+    }
   }
 }
 
@@ -29,28 +35,11 @@ function addNumberOfAssigned(i) {
   }
 }
 
-/* function addAssignedToSection(i){
-    for(let j = 0; j < tasks[i]["assigned"].length; j++){
-        let container = document.getElementById(`assigned-to-container(${i})`);
-        container.innerHTML += taskCardAssignedToTemplate(i,j);
-    } 
-    let count = 0;
-    let container = document.getElementById(`assigned-to-container(${i})`);
-    container.innerHTML += taskCardAssignedToTemplate(0);
-} */
 
 function taskCardTemplate(i) {
   return `
-    <div onclick="openBacklogTask(${i})" class="backlog-task priority-${tasks[
-    i
-  ]["urgency"].toLowerCase()}">
+    <div onclick="openBacklogTask(${i})" class="backlog-task priority-${tasks[i]["urgency"].toLowerCase()}">
     <div class="assigned-to" id="assigned-to-container(${i})">
-    <img src="${tasks[i]["assigned"][0]["img"]}" alt="">
-    <div class="name-container">
-        <p>${tasks[i]["assigned"][0]["name"]}</p>
-        <a href="" type="email">${tasks[i]["assigned"][0]["email"]}</a>
-        <span id="assigned-quantity(${i})"></span>
-    </div>
     </div>
    <span class="category">${tasks[i]["category"].toUpperCase()}</span>
    <p class="details">${tasks[i]["description"]}</p>
@@ -58,21 +47,32 @@ function taskCardTemplate(i) {
 `;
 }
 
-/* function taskCardAssignedToTemplate(i,j){
-    return `
-    <div class="name-container">
-        <p>${tasks[i]["assigned"][0]["name"]}</p>
-        <a href="" type="email">${tasks[i]["assigned"][0]["email"]}</a>
-        <span id="assigned-quantity(${i})"></span>
-    </div>
-    ` 
-} */
+function assignedToTemplate(i){
+
+  return `<img src="${tasks[i]["assigned"][0]["img"]}" alt="">
+  <div class="name-container">
+      <p>${tasks[i]["assigned"][0]["name"]}</p>
+      <a href="" type="email">${tasks[i]["assigned"][0]["email"]}</a>
+      <span id="assigned-quantity(${i})"></span>
+  </div>`
+}
 
 function openBacklogTask(i) {
   showBigContainer();
   renderBigTask(i);
+  setOnClick(i);
 }
 
+function setOnClick(i){
+  let icon = document.getElementById("send-to-board");
+  icon.setAttribute("onclick",`sendToBoard(${i})`);
+}
+
+function sendToBoard(i){
+  tasks[i]['status'] = "to-do";
+  saveInBackend();
+  renderTasks();
+}
 function renderBigTask(i) {
   let sub_container = document.getElementById("big-task-subcontainer");
   sub_container.innerHTML = "";

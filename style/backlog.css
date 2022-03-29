@@ -105,11 +105,13 @@ main{
     margin-top: .5rem;
 }
 
-.close-icon{
+.icons-container{
     position: absolute;
     top: 0;
     right: 0;
-    margin: 2rem;
+    padding: 2rem;
+}
+.icons-container > *{
     width: 40px;
     cursor: pointer;
 }
