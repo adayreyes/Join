@@ -6,6 +6,7 @@ function init() {
     updateTesting();
     updateDone();
     addPriority();
+    saveInBackend();
 }
 
 function updateToDo() {

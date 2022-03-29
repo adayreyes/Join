@@ -4,6 +4,7 @@ main{
     justify-content: space-around;
     padding: 50px;
     position: relative;
+    flex-wrap: wrap;
 }
 
 .board-sub-container{
@@ -16,7 +17,6 @@ main{
 
 .task-board{
     width: 365px;
-    height: 800px;
     background-color: var(--main-bg);
     display: flex;
     flex-direction: column;
@@ -45,7 +45,8 @@ main{
     flex-direction: column;
     height: 170px;
     width: 330px;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     background-color: white;
     border-radius: 8px;
     border-left: 8px solid orange;
@@ -137,6 +138,7 @@ main{
     background-color: white;
     width: 500px;
     height: 400px;
+    display: none;
 }
 
 .person-container{
