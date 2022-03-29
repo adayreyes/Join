@@ -1,4 +1,5 @@
 function start() {
+  initBackend();
   includeHTML();
   renderTasks();
 }

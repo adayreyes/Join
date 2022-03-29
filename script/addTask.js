@@ -107,8 +107,10 @@ function createTask() {
     'status': '',
     'assigned': assigned
   });
+  saveInBackend();
   resetAddTask();
 }
+
 
 
 
