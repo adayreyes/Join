@@ -54,20 +54,75 @@ function updateDone() {
         document.getElementById('done').innerHTML += generateToDoHTML(i, element);
         //  addPriority(i, element);
     }
+
 }
 
 function generateToDoHTML(i, element) {
-    return `<div class="task" draggable="true" ondragstart="startDragging(${element['id']})" id="task-${element['id']}">
+    return `<div class="task" draggable="true" onclick="showTask(${element['id']})" ondragstart="startDragging(${element['id']})" id="task-${element['id']}">
     <div class="task-sub-container">
-        <div class="task-date"><span id="date-${i}">${element['date']}</span></div>
-        <div class="task-title"><span id="title-${i}">${element['title']}</span></div>
+        <div class="task-date"><span id="date-${element['id']}">${element['date']}</span></div>
+        <div class="task-title"><span id="title-${element['id']}">${element['title']}</span></div>
          <div class="description-details"><span id="task-description-${i}">${element['description']}</span></div>
         <div class="task-person">
-        <div class="category"><span id="task-category-${i}">${element['category']}</span></div>
-        <img class="person-logo" id="person-logo-${i}" src="${element['assigned'][0]['img']}" alt="">
+        <div class="category"><span id="task-category-${element['id']}">${element['category']}</span></div>
+        <div class="assigned-count">
+        <img class="person-logo" id="person-logo-${element['id']}" src="${element['assigned'][0]['img']}" alt="">
+        <div>+ ${element['assigned'].length - 1}  </div
+        </div>
         </div>
     </div>
 </div>`
+}
+
+function showTask(i) {
+
+    let taskdetails = document.getElementById('task-details');
+    taskdetails.innerHTML = '';
+    taskdetails.innerHTML += generateDetails(i);
+    let renderperson = document.getElementById('person-container');
+    renderperson.innerHTML = '';
+    renderperson.innerHTML += renderPerson(i);
+}
+
+function generateDetails(i) {
+
+    return `<div class="nav-container">
+
+    <img class="nav-icons" src="img/cross.png" alt="">
+    <div>
+        <img class="nav-icons" src="img/edit.png" alt="">
+        <img class="nav-icons" src="img/move.png" alt="">
+        <img class="nav-icons" src="img/garbage.png" alt="">
+    </div>
+</div>
+<div>
+    ${tasks[i]['date']}
+</div>
+<div>
+${tasks[i]['title']}
+</div>
+<div>
+${tasks[i]['description']}
+</div>
+<div class="person-container" id="person-container">
+ 
+</div>`
+}
+
+function renderPerson(i){
+
+    for (let j = 0; j < tasks[i]['assigned'].length; j++) {
+        const element = tasks[i]['assigned'][j];
+        
+        return ` <div>
+        <img class="person-logo" id="person-${i}" src="img/profile.png" alt="">
+        <div>
+            category
+        </div>
+    </div>`
+
+    }
+
 }
 
 function startDragging(id) {

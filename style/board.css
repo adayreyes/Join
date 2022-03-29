@@ -3,6 +3,7 @@ main{
     width: 100%;
     justify-content: space-around;
     padding: 50px;
+    position: relative;
 }
 
 .board-sub-container{
@@ -35,6 +36,7 @@ main{
     height: 50px;
     border-radius: 100%;
     object-fit: cover;
+    margin-right: 5px;
 }
 
 .task{
@@ -88,6 +90,11 @@ main{
     color: rgb(156, 156, 156);
 }
 
+.description-details{
+    height: 40px;
+    overflow: hidden;
+}
+
 .task-title{
     font-weight: bold;
 }
@@ -100,4 +107,34 @@ main{
 
 .drag-area-highlight{
     background-color: #a4a4a7;
+}
+
+.task-details{
+    z-index: 999;
+    position: absolute;
+}
+
+.assigned-count{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-icons{
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+
+.task-details{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 500px;
+    height: 400px;
 }
