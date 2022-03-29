@@ -138,3 +138,9 @@ main{
     width: 500px;
     height: 400px;
 }
+
+.person-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}

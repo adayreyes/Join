@@ -99,7 +99,6 @@ function saveInBackend() {
 
 window.onload = initBackend();
 
-
 /* ##############################################*/
 
 function includeHTML() {

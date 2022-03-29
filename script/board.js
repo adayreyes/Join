@@ -81,7 +81,7 @@ function showTask(i) {
     taskdetails.innerHTML += generateDetails(i);
     let renderperson = document.getElementById('person-container');
     renderperson.innerHTML = '';
-    renderperson.innerHTML += renderPerson(i);
+    newAssignedSection(i);
 }
 
 function generateDetails(i) {
@@ -109,21 +109,20 @@ ${tasks[i]['description']}
 </div>`
 }
 
-function renderPerson(i){
-
-    for (let j = 0; j < tasks[i]['assigned'].length; j++) {
-        const element = tasks[i]['assigned'][j];
-        
-        return ` <div>
-        <img class="person-logo" id="person-${i}" src="img/profile.png" alt="">
-        <div>
-            category
-        </div>
-    </div>`
-
-    }
-
-}
+function newAssignedSection(i) {
+    let assigned_container = document.getElementById("person-container");
+    tasks[i]["assigned"].forEach((person) => {
+      assigned_container.innerHTML += `
+      <div class="person-container">
+      <img class="person-logo" src="${person["img"]}" alt="">
+      <div class="name-container">
+          <p>${person["name"]}</p>
+          <a href="" type="email">${person["email"]}</a>
+      </div>
+      </div>
+      `;
+    });
+  }
 
 function startDragging(id) {
     currentDraggedElement = id;
