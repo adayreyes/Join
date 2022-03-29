@@ -7,6 +7,7 @@
     <title>Join-Project</title>
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/backlog.css">
+    <script src="script/mini_backend.js"></script>
     <script src="./script/script.js"></script>
     <script src="./script/backlog.js"></script>
 </head>
@@ -24,65 +25,35 @@
                 <span class="font-title">DETAILS</span>
             </header>
             <section class="backlog-list" id="backlog-list">
-                <div class="backlog-task sales">
-                    <div class="assigned-to">
-                        <img src="./img/profile.png" alt="">
-                        <div class="name-container">
-                            <p>Aday Reyes</p>
-                            <a href="" type="email">adayreyes4a@gmail.com</a>
-                        </div>
-                    </div>
-                   <span class="category">Marketing</span>
-                   <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, officia. .</p>
-                </div>
-                <div class="backlog-task marketing">
-                    <div class="assigned-to">
-                        <img src="./img/profile.png" alt="">
-                        <div class="name-container">
-                            <p>Aday Reyes</p>
-                            <a href="" type="email">adayreyes4a@gmail.com</a>
-                        </div>
-                    </div>
-                   <span class="category">Marketing</span>
-                   <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, officia. .</p>
-                </div>
-                <div class="backlog-task IT">
-                    <div class="assigned-to">
-                        <img src="./img/profile.png" alt="">
-                        <div class="name-container">
-                            <p>Aday Reyes</p>
-                            <a href="" type="email">adayreyes4a@gmail.com</a>
-                        </div>
-                    </div>
-                   <span class="category">Marketing</span>
-                   <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, officia. .</p>
-                </div>
             </section>
         </section>
         <section class="big-task-container d-none" id="big-task-container">
-            <div class="big-task-title-container">
-                <span class="font-title">TITLE</span>
-                <p id="big-task-title">Esto es una prueba</p>
-            </div>
-            <div class="big-task-category-container">
-                <span class="font-title">CATEGORY</span>
-                <p id="big-task-category">Esto es una prueba</p>
-            </div>
-            <div class="big-task-urgency-container">
-                <span class="font-title">URGENCY</span>
-                <p id="big-task-urgency">Esto es una prueba</p>
-            </div>
-            <div class="big-task-description-container">
-                <span class="font-title">DESCRIPTION</span>
-                <p id="big-task-description">Esto es una prueba</p>
-            </div>
-            <div class="big-task-date-container">
-                <span class="font-title">DUE DATE</span>
-                <p id="big-task-date">Esto es una prueba</p>
-            </div>
-            <div class="big-task-assigned-container">
-                <span class="font-title">ASSIGNED TO</span>
-                <p id="big-task-assigned">Esto es una prueba</p>
+            <img onclick="closeBigTask()" class="close-icon" src="./img/close-window-64.ico" alt="">
+            <div class="big-task-subcontainer" id="big-task-subcontainer">
+                <div class="big-task-title-container">
+                    <span class="font-title">TITLE</span>
+                    <p id="big-task-title">Esto es una prueba</p>
+                </div>
+                <div class="big-task-category-container">
+                    <span class="font-title">CATEGORY</span>
+                    <p id="big-task-category">Esto es una prueba</p>
+                </div>
+                <div class="big-task-urgency-container">
+                    <span class="font-title">URGENCY</span>
+                    <p id="big-task-urgency">Esto es una prueba</p>
+                </div>
+                <div class="big-task-description-container">
+                    <span class="font-title">DESCRIPTION</span>
+                    <p id="big-task-description">Esto es una prueba</p>
+                </div>
+                <div class="big-task-date-container">
+                    <span class="font-title">DUE DATE</span>
+                    <p id="big-task-date">Esto es una prueba</p>
+                </div>
+                <div class="big-task-assigned-to-container">
+                    <span class="font-title">ASSIGNED TO</span>
+                    <p id="big-task-assigned">Esto es una prueba</p>
+                </div>
             </div>
         </section>
     </main>
