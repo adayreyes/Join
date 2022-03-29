@@ -85,9 +85,33 @@ main{
     top: 100px;
     display: flex;
     justify-content: center;
-    gap: 10%;
+    
+}
+
+.big-task-subcontainer{
+    width: 70%;
+    height: 60%;
+    background-color: var(--main-bg);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 4rem;
     flex-wrap: wrap;
     padding: 2rem;
+    text-align: center;
+}
+
+.big-task-subcontainer div > *{
+    margin-top: .5rem;
+}
+
+.close-icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2rem;
+    width: 40px;
+    cursor: pointer;
 }
 .d-none{
     display: none;
