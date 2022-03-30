@@ -83,26 +83,35 @@ function showTask(i) {
     let renderperson = document.getElementById('person-container');
     renderperson.innerHTML = '';
     newAssignedSection(i);
+    document.getElementById('task-details').classList.remove('d-none');
 }
 
 function generateDetails(i) {
 
     return `<div class="nav-container">
 
-    <img class="nav-icons" src="img/cross.png" alt="">
+    <img class="nav-icons" onclick="closeDetails()" src="img/cross.png" alt="">
     <div>
         <img class="nav-icons" src="img/edit.png" alt="">
         <img class="nav-icons" src="img/move.png" alt="">
         <img class="nav-icons" src="img/garbage.png" alt="">
     </div>
 </div>
-<div>
+<div class="task-date-details">
     ${tasks[i]['date']}
 </div>
+
+<div class="task-title-category">
+
 <div>
 ${tasks[i]['title']}
 </div>
 <div>
+${tasks[i]['category']}
+</div>
+</div>
+
+<div class="task-description">
 ${tasks[i]['description']}
 </div>
 <div class="person-container" id="person-container">
@@ -127,6 +136,10 @@ function newAssignedSection(i) {
 
 function startDragging(id) {
     currentDraggedElement = id;
+}
+
+function closeDetails(){
+    document.getElementById('task-details').classList.add('d-none')
 }
 
 function allowDrop(ev) {
