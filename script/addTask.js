@@ -36,7 +36,8 @@ function templateProfilSelectAdd() {
 
 
 /* Funktions: */
-function init() {
+async function init() {
+  await initBackend();
   includeHTML();
   renderAddTask();
 }
@@ -97,6 +98,7 @@ function createTask() {
   assignedTo.forEach((i) => {
     assigned.push(users[i]);
   });
+  console.log(tasks);
   tasks.push({
     'id': tasks.length,
     'title': document.getElementById('title-input').value,
@@ -107,7 +109,9 @@ function createTask() {
     'status': '',
     'assigned': assigned
   });
+  console.log(tasks);
   saveInBackend();
+  console.log(tasks);
   resetAddTask();
 }
 
