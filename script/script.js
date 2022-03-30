@@ -93,11 +93,11 @@ async function initBackend() {
 }
 
 function saveInBackend() {
-  backend.setItem('users', JSON.stringify(users));
+  //backend.setItem('users', JSON.stringify(users));
   backend.setItem('tasks', JSON.stringify(tasks));
 }
 
-window.onload = initBackend();
+//window.onload = initBackend();
 
 /* ##############################################*/
 

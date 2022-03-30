@@ -1,5 +1,5 @@
-function start() {
-  initBackend();
+async function start() {
+  await initBackend();
   includeHTML();
   renderTasks();
 }

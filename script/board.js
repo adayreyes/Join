@@ -1,12 +1,13 @@
 let currentDraggedElement;
 
-function init() {
+async function init() {
+    await initBackend();
     updateToDo();
     updateInProgress();
     updateTesting();
     updateDone();
     addPriority();
-    saveInBackend();
+    
 }
 
 function updateToDo() {
@@ -149,6 +150,7 @@ function allowDrop(ev) {
 function moveTo(status) {
     tasks[currentDraggedElement]['status'] = status;
     init();
+    saveInBackend();
 }
 
 function highlight(id) {
