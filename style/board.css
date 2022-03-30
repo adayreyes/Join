@@ -171,6 +171,16 @@ main{
     padding-top: 10px;
 }
 
+.task-description span{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    overflow-wrap: anywhere;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+
 .task-date-details{
     font-weight: 600;
     padding-left: 20px;

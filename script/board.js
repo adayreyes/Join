@@ -113,7 +113,9 @@ ${tasks[i]['category']}
 </div>
 
 <div class="task-description">
-${tasks[i]['description']}
+
+<span>${tasks[i]['description']}</span>
+
 </div>
 <div class="person-container" id="person-container">
  
