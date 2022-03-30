@@ -150,7 +150,7 @@ function allowDrop(ev) {
 function moveTo(status) {
     tasks[currentDraggedElement]['status'] = status;
     init();
-    saveInBackend();
+    //saveInBackend();
 }
 
 function highlight(id) {

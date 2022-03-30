@@ -70,7 +70,7 @@ function setOnClick(i){
 
 function sendToBoard(i){
   tasks[i]['status'] = "to-do";
-  saveInBackend();
+  //saveInBackend();
   renderTasks();
 }
 function renderBigTask(i) {
