@@ -101,21 +101,24 @@ function createTask() {
   console.log(tasks);
   tasks.push({
     'id': tasks.length,
-    'title': document.getElementById('title-input').value,
-    'category': document.getElementById('category').value,
-    'description': document.getElementById('description').value,
-    'date': document.getElementById('date-input').value,
-    'urgency': document.getElementById('urgency').value,
+    'title': checkExistence(document.getElementById('title-input').value),
+    'category': checkExistence(document.getElementById('category').value),
+    'description': checkExistence(document.getElementById('description').value),
+    'date': checkExistence(document.getElementById('date-input').value),
+    'urgency': checkExistence(document.getElementById('urgency').value),
     'status': '',
-    'assigned': assigned
+    'assigned': assigned 
   });
   console.log(tasks);
   saveInBackend();
   console.log(tasks);
-  resetAddTask();
+  resetAddTask(); 
 }
 
-
+function checkExistence(element) {
+  if(!element) return '';
+  return element;
+}
 
 
 

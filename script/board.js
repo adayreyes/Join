@@ -12,7 +12,6 @@ async function init() {
 
 function updateToDo() {
   let todo = tasks.filter(t => t['status'] == 'to-do');
-
   document.getElementById('to-do').innerHTML = '';
 
   for (let i = 0; i < todo.length; i++) {
@@ -59,6 +58,12 @@ function updateDone() {
 
 }
 
+function tempHTML(element) {
+  if(element['assigned'].length == 0) return '';
+  return `<img class="person-logo" id="person-logo-${element['id']}" src="${element['assigned'][0]['img']}" alt="">
+  <div>+ ${element['assigned'].length - 1}  </div>`;
+}
+
 function generateToDoHTML(element) {
   return `<div class="task" draggable="true" onclick="showTask(${element['id']})" ondragstart="startDragging(${element['id']})" id="task-${element['id']}">
     <div class="task-sub-container">
@@ -68,8 +73,7 @@ function generateToDoHTML(element) {
         <div class="task-person">
         <div class="category"><span id="task-category-${element['id']}">${element['category']}</span></div>
         <div class="assigned-count">
-        <img class="person-logo" id="person-logo-${element['id']}" src="${element['assigned'][0]['img']}" alt="">
-        <div>+ ${element['assigned'].length - 1}  </div
+        ${tempHTML(element)}
         </div>
         </div>
     </div>
