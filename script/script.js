@@ -58,6 +58,16 @@ let tasks = [
   }
 ];
 
+
+function deleteTask(i) {
+  tasks.splice(tasks.indexOf(tasks.filter((ele) => {
+    if(ele['id'] === i) return true;
+    return false;
+  })[0]),1);
+  saveInBackend();
+  init();
+}
+
 setURL('http://gruppe-205.developerakademie.net/smallest_backend_ever');
 
 async function initBackend() {
