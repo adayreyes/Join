@@ -92,7 +92,8 @@ function setOnClick(i){
 }
 
 function deleteBacklogTask(i){
-  deleteTask(i);
+  tasks.splice(i,1);
+  saveInBackend();
   closeBigTask();
   renderTasks();
 

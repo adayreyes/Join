@@ -5,6 +5,8 @@ main{
     padding: 50px;
     position: relative;
     flex-wrap: wrap;
+    height: 100vh;
+    overflow: auto;
 }
 
 .board-sub-container{
