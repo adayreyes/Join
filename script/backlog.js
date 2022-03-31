@@ -6,10 +6,22 @@ async function start() {
 
 function renderTasks() {
   if(checkStatus()){
-    let backlog = document.getElementById("backlog-list");
-    backlog.innerHTML = "";
-    addTaskContainer(backlog);
+    renderAllTasks();
+  } else{
+    renderBacklogEmpty()
   }
+
+}
+
+function renderBacklogEmpty(){
+  let container = document.getElementById("backlog-list");
+  container.innerHTML = `<h2 class="empty-backlog">Backlog is empty</h2>`
+}
+
+function renderAllTasks(){
+  let backlog = document.getElementById("backlog-list");
+  backlog.innerHTML = "";
+  addTaskContainer(backlog);
 }
 
 function checkStatus(){
