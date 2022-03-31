@@ -64,24 +64,34 @@ function openBacklogTask(i) {
 }
 
 function setOnClick(i){
-  let icon = document.getElementById("send-to-board");
-  icon.setAttribute("onclick",`sendToBoard(${i})`);
+  let send_icon = document.getElementById("send-to-board");
+  send_icon.setAttribute("onclick",`sendToBoard(${i})`);
+  let delete_icon = document.getElementById("delete-icon");
+  delete_icon.setAttribute("onclick",`deleteBacklogTask(${i})`)
+}
+
+function deleteBacklogTask(i){
+  deleteTask(i);
+  closeBigTask();
+  renderTasks();
+
 }
 
 function sendToBoard(i){
   tasks[i]['status'] = "to-do";
+  closeBigTask();
   saveInBackend();
   renderTasks();
 }
 function renderBigTask(i) {
-  let sub_container = document.getElementById("big-task-subcontainer");
-  sub_container.innerHTML = "";
-  newBigTaskSection(sub_container, i, "title");
-  newBigTaskSection(sub_container, i, "category");
-  newBigTaskSection(sub_container, i, "urgency");
-  newBigTaskSection(sub_container, i, "description");
-  newBigTaskSection(sub_container, i, "date");
-  setAssignedSection(sub_container, "assigned");
+  let tasks_container = document.getElementById("big-task-tasks-container");
+  tasks_container.innerHTML = "";
+  newBigTaskSection(tasks_container, i, "title");
+  newBigTaskSection(tasks_container, i, "category");
+  newBigTaskSection(tasks_container, i, "urgency");
+  newBigTaskSection(tasks_container, i, "description");
+  newBigTaskSection(tasks_container, i, "date");
+  setAssignedSection(tasks_container, "assigned");
   newAssignedSection(i);
 }
 

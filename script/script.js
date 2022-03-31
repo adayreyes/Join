@@ -64,9 +64,9 @@ function deleteTask(i) {
     if(ele['id'] === i) return true;
     return false;
   })[0]),1);
-  closeDetails();
+ /*  closeDetails(); */
   saveInBackend();
-  init();
+  /* init(); */
 }
 
 setURL('http://gruppe-205.developerakademie.net/smallest_backend_ever');
