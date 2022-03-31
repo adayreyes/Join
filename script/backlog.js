@@ -5,9 +5,18 @@ async function start() {
 }
 
 function renderTasks() {
-  let backlog = document.getElementById("backlog-list");
-  backlog.innerHTML = "";
-  addTaskContainer(backlog);
+  if(checkStatus()){
+    let backlog = document.getElementById("backlog-list");
+    backlog.innerHTML = "";
+    addTaskContainer(backlog);
+  }
+}
+
+function checkStatus(){
+  let bool = false;
+  tasks.forEach(elem =>{if(elem["status"])bool = true});
+  return bool
+  
 }
 
 function addTaskContainer(backlog) {

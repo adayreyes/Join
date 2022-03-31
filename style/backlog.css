@@ -19,6 +19,12 @@ main{
 .backlog-task p:last-child{
     text-align: right;
 }
+.empty-backlog{
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 4rem;
+    color: grey;
+}
 
 .backlog-list{
     display: flex;
