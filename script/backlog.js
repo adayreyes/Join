@@ -14,7 +14,7 @@ function renderTasks() {
 
 function checkStatus(){
   let bool = false;
-  tasks.forEach(elem =>{if(elem["status"])bool = true});
+  tasks.forEach(elem =>{if(elem["status"] || elem["status"] == "")bool = true});
   return bool
   
 }
