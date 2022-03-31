@@ -110,7 +110,7 @@ function generateDetails(i) {
     <img class="nav-icons" onclick="closeDetails()" src="img/cross.png" alt="">
     <div>
       
-        <img class="nav-icons" src="img/edit.png" alt="">
+       <!-- <img class="nav-icons" src="img/edit.png" alt=""> -->
         <img class="nav-icons" src="img/move.png" alt="" onclick="moveToBacklog(${i})">
         <img class="nav-icons" src="img/garbage.png" alt="" onclick="deleteTask(${i}), init()">
     </div>
