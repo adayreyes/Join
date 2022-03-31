@@ -111,8 +111,8 @@ function generateDetails(i) {
     <div>
       
        <!-- <img class="nav-icons" src="img/edit.png" alt=""> -->
-        <img class="nav-icons" src="img/move.png" alt="" onclick="moveToBacklog(${i})">
-        <img class="nav-icons" src="img/garbage.png" alt="" onclick="deleteTask(${i}), init()">
+        <img class="nav-icons" src="img/move.png" alt="" onclick="moveToBacklog(${findi(i)})">
+        <img class="nav-icons" src="img/garbage.png" alt="" onclick="deleteBoardTask(${findi(i)}), render()">
     </div>
 </div>
 <div class="task-date-details">
@@ -167,7 +167,7 @@ function allowDrop(ev) {
 }
 
 function moveTo(status) {
-    tasks[currentDraggedElement]['status'] = status;
+    tasks[findi(currentDraggedElement)]['status'] = status;
     render();
     saveInBackend();
 }
@@ -202,11 +202,20 @@ function addPriority() {
 }
 function moveToBacklog(i) {
     tasks[i]['status'] = "";
-    render();
+    closeDetails();
     saveInBackend();
     render();
 }
 
+function deleteBoardTask(i) {
+    tasks.splice(tasks.indexOf(tasks.filter((ele) => {
+      if(ele['id'] === i) return true;
+      return false;
+    })[0]),1);
+    closeDetails();
+    saveInBackend();
+    render();
+  }
 
 
 
