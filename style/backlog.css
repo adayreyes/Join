@@ -4,6 +4,7 @@ main{
     width: 100%;
     position: relative;
 }
+
 .backlog-header{
     display: flex;
     width: 100%;
@@ -116,6 +117,14 @@ main{
     gap: 2rem;
     justify-content: space-around;
 }
+.big-task-name-container{
+    display: flex;
+    flex-direction: column;
+}
+.big-task-name-container a{
+    text-decoration: none;
+    color: rgb(0, 118, 253);
+}
 .big-task-tasks-container div > *{
     margin-top: .5rem;
 }
@@ -123,4 +132,45 @@ main{
 
 .d-none{
     display: none;
+}
+
+@media(max-width: 1000px){
+    main{
+        text-align: center;
+    }
+    .backlog-header span:last-child{
+        text-align: center;
+    }
+    .backlog-task p:last-child{
+        text-align: center;
+    }
+    .big-task-tasks-container{
+        flex-direction: column;
+    }
+    .big-task-assigned-people{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+@media(max-width:700px){
+    .backlog-header span:last-child{
+        display: none;
+    }
+    .backlog-task p:last-child{
+        display: none;
+    }
+    .backlog-header span:nth-child(2){
+       text-align: right;
+    }
+    .backlog-task span:nth-child(2){
+        text-align: right;
+    }
+}
+
+@media(max-width:500px){
+    .name-container a{
+        display: none;
+    }
 }

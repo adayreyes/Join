@@ -121,7 +121,7 @@ function setAssignedSection(container, section) {
   container.innerHTML += `
   <div>
   <span class="font-title">ASSIGNED TO</span>
-  <p id="big-task-assigned-people"></p>
+  <div id="big-task-assigned-people" class="big-task-assigned-people"></div>
 </div>
   `;
 }
@@ -132,7 +132,7 @@ function newAssignedSection(i) {
     assigned_container.innerHTML += `
     <div class="assigned-to">
     <img src="${person["img"]}" alt="">
-    <div class="name-container">
+    <div class="big-task-name-container">
         <p>${person["name"]}</p>
         <a href="" type="email">${person["email"]}</a>
     </div>
