@@ -22,46 +22,59 @@
 <body onload="includeHTML(), init()">
 
 
-    <header class="main-header" w3-include-html="templates/header.html"></header>
+    <header class="main-header" id="main-header" w3-include-html="templates/header.html"></header>
 
+    <img src="img/menu.png" class="resp-img" id="resp-img" onclick="showNavBar()" alt="">
 
     <main>
-        <div class="task-details d-none" id="task-details">
-
-            
-
+        <div class="hidebar d-none" id="hidebar" onclick="hideMenu()">
 
         </div>
 
-        <div class="board-sub-container">
-            <span class="task-headline">TO DO</span>
-            <div class="task-board" id="to-do" ondrop="moveTo('to-do'); removeHighlight(id)" ondragleave="removeHighlight('to-do')" ondragover="allowDrop(event); highlight(id)">
+        <div class="main-container">
 
+        
+            <div class="task-deteails-box d-none" id="task-details-box">
+                <div class="task-details d-none" id="task-details">
+
+
+                </div>
+            </div>
+
+            <div class="board-sub-container">
+                <span class="task-headline">TO DO</span>
+                <div class="task-board" id="to-do" ondrop="moveTo('to-do'); removeHighlight(id)"
+                    ondragleave="removeHighlight('to-do')" ondragover="allowDrop(event); highlight(id)">
+
+                </div>
+            </div>
+
+            <div class="board-sub-container">
+                <span class="task-headline">IN PROGRESS</span>
+                <div class="task-board" id="in-progress" ondrop="moveTo('in-progress'); removeHighlight(id)"
+                    ondragleave="removeHighlight('in-progress')" ondragover="allowDrop(event); highlight(id)">
+
+                </div>
+            </div>
+
+            <div class="board-sub-container">
+                <span class="task-headline">TESTING</span>
+                <div class="task-board" id="testing" ondrop="moveTo('testing'); removeHighlight(id)"
+                    ondragleave="removeHighlight('testing')" ondragover="allowDrop(event); highlight(id)">
+
+                </div>
+            </div>
+
+            <div class="board-sub-container">
+                <span class="task-headline">DONE</span>
+                <div class="task-board" id="done" ondrop="moveTo('done'); removeHighlight(id)"
+                    ondragleave="removeHighlight('done')" ondragover="allowDrop(event); highlight(id)">
+
+                </div>
             </div>
         </div>
-
-        <div class="board-sub-container">
-            <span class="task-headline">IN PROGRESS</span>
-            <div class="task-board" id="in-progress" ondrop="moveTo('in-progress'); removeHighlight(id)" ondragleave="removeHighlight('in-progress')" ondragover="allowDrop(event); highlight(id)">
-
-            </div>
-        </div>
-
-        <div class="board-sub-container">
-            <span class="task-headline">TESTING</span>
-            <div class="task-board" id="testing" ondrop="moveTo('testing'); removeHighlight(id)" ondragleave="removeHighlight('testing')" ondragover="allowDrop(event); highlight(id)">
-
-            </div>
-        </div>
-
-        <div class="board-sub-container">
-            <span class="task-headline">DONE</span>
-            <div class="task-board" id="done" ondrop="moveTo('done'); removeHighlight(id)"  ondragleave="removeHighlight('done')" ondragover="allowDrop(event); highlight(id)">
-
-            </div>
-        </div>
-
     </main>
+
 </body>
 
 </html>

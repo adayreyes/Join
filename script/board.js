@@ -85,13 +85,14 @@ function generateToDoHTML(element) {
 
 function showTask(i) {
 
-    let taskdetails = document.getElementById('task-details');
+    let taskdetails = document.getElementById('task-details-box');
+    document.getElementById('task-details-box').classList.remove('d-none');
     taskdetails.innerHTML = '';
     taskdetails.innerHTML += generateDetails(i);
     let renderperson = document.getElementById('person-container');
     renderperson.innerHTML = '';
     newAssignedSection(i);
-    document.getElementById('task-details').classList.remove('d-none');
+    document.getElementById('task-details-box').classList.remove('d-none');
 }
 
 
@@ -111,8 +112,8 @@ function generateDetails(i) {
     <div>
       
        <!-- <img class="nav-icons" src="img/edit.png" alt=""> -->
-        <img class="nav-icons" src="img/move.png" alt="" onclick="moveToBacklog(${findi(i)})">
-        <img class="nav-icons" src="img/garbage.png" alt="" onclick="deleteBoardTask(${findi(i)}), render()">
+        <img class="nav-icons" title="move to backlog" src="img/move.png" alt="" onclick="moveToBacklog(${findi(i)})">
+        <img class="nav-icons" title="delete task" src="img/garbage.png" alt="" onclick="deleteBoardTask(${findi(i)}), render()">
     </div>
 </div>
 <div class="task-date-details">
@@ -159,7 +160,7 @@ function startDragging(id) {
 }
 
 function closeDetails() {
-    document.getElementById('task-details').classList.add('d-none')
+    document.getElementById('task-details-box').classList.add('d-none')
 }
 
 function allowDrop(ev) {
@@ -202,6 +203,7 @@ function addPriority() {
 }
 function moveToBacklog(i) {
     tasks[i]['status'] = "";
+    document.getElementById('task-details-box').classList.remove('d-none');
     closeDetails();
     saveInBackend();
     render();

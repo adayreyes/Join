@@ -106,6 +106,18 @@ function saveInBackend() {
   backend.setItem('tasks', JSON.stringify(tasks));
 }
 
+function showNavBar(){
+  document.getElementById('main-header').style.display = "flex";
+  document.getElementById('resp-img').classList.add('d-none');
+  document.getElementById('hidebar').classList.remove('d-none');
+}
+
+function hideMenu(){
+  document.getElementById('main-header').style.display = "none"
+  document.getElementById('resp-img').classList.remove('d-none')
+  document.getElementById('hidebar').classList.add('d-none');
+}
+
 //window.onload = initBackend();
 
 /* ##############################################*/
