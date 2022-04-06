@@ -15,7 +15,7 @@ function templateProfilSelect(i) {
 
 function templateAssignTo(i) {
   return /*html*/ `
-    <img src="${users[i]['img']}" class="round-img">
+    <img src="${users[i]['img']}" onclick="removeUserFromTask(${i})" class="round-img">
   `;
 }
 
@@ -55,13 +55,17 @@ function renderAddTask() {
     }
   }
   assignedList.innerHTML += templateAssignToAdd();
-  selectUserList.innerHTML += templateProfilSelectAdd();
 }
 
 
 function addUserToTask(userNum) {
   assignedTo.push(userNum);
   hideProfileSelect();
+  renderAddTask();
+}
+
+function removeUserFromTask(userNum) {
+  assignedTo.splice(assignedTo.findIndex(ele => ele == userNum),1);
   renderAddTask();
 }
 
@@ -73,12 +77,6 @@ function showProfilSelect() {
 
 function hideProfileSelect() {
   document.getElementById('section-select').classList.add('hide');
-}
-
-
-function addNewUser() {
-  // Add this function later #############################
-  console.log('Add new User');
 }
 
 
