@@ -12,8 +12,14 @@
     <script src="./script/backlog.js"></script>
 </head>
 <body onload="start()">
-    <header class="main-header" w3-include-html="templates/header.html"></header>
+    <header class="main-header" id="main-header" w3-include-html="templates/header.html"></header>
+
+    <img src="img/menu.png" class="resp-img" id="resp-img" onclick="showNavBar()" alt="">
     <main>
+        <div class="hidebar d-none" id="hidebar" onclick="hideMenu()">
+
+        </div>
+
         <header class="section-header">
             <h1>Backlog</h1>
             <span class="font-small">Learning Management System Project</span>

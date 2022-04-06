@@ -1,5 +1,6 @@
 .main-addTask {
     width: 100%;
+    position: relative;
 }
 
 .addTask-section {
@@ -226,6 +227,15 @@ display: none;
   gap: 5px;
 }
 
+.d-none{
+    display: none;
+}
+
+@media(max-width: 1000px){
+    main{
+        text-align: center;
+    }
+}
 
 @media (max-width: 710px) {
   .row-input {

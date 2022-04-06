@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Help</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/help.css">
+    <script src="script/mini_backend.js"></script>
+    <script src="script/script.js"></script>
+    
+</head>
+<body onload="includeHTML()">
+    <header class="main-header" id="main-header" w3-include-html="templates/header.html"></header>
+
+    <img src="img/menu.png" class="resp-img" id="resp-img" onclick="showNavBar()" alt="">
+<main>
+    <div class="hidebar d-none" id="hidebar" onclick="hideMenu()">
+
+    </div>
+
+    <header class="section-header">
+        <h1>Help</h1>
+        <span class="font-small">Learning Management System Project</span>
+    </header>
+
+    <ol> 
+        <li>Erstelle eine neue Aufgabe in der Sektion "Add Task".</li>
+        <li>Die neue Aufgabe wird im Backlog gespeichert.</li>
+        <li>Die Aufgabe im Backlog kann über die Detailansicht ins Board verschoeben oder gelöscht werden.</li>
+        <li>Die neue Aufgabe landet in der To-Do Liste des Board Bereichs.</li>
+        <li>Über Drag-and-Drop im Board Bereich kann die Aufgabe verschoben werden.</li>
+        <li>In der Detailansicht der Aufgabe in Board Bereich, kann die Aufgabe gelöscht oder zurück ins Backlog geschickt werden.</li>
+    </ol>
+  
+</main>
+
+
+</body>
+</html>

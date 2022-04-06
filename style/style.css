@@ -125,6 +125,7 @@ body {
     margin: 10px;
     position: absolute;
     z-index: 999;
+    cursor: pointer;
 }
 
 .hidebar{

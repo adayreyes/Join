@@ -1,0 +1,23 @@
+main{
+    width: 100%;
+    position: relative;
+}
+
+ol{
+    padding: 2rem;
+    font-size: 20px;
+    text-align: start;
+}
+li{
+    margin-top: 7px;
+}
+
+.d-none{
+    display: none;
+}
+
+@media(max-width: 1000px){
+    main{
+        text-align: center;
+    }
+}
