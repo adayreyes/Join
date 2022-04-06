@@ -18,6 +18,11 @@ body {
     font-family: 'PT Sans', sans-serif;
     display: flex;
 }
+main{
+    overflow-y: auto;
+    height: 100vh;
+}
+
 
 .main-header {
     min-width: 200px;

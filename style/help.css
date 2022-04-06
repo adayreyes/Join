@@ -2,7 +2,9 @@ main{
     width: 100%;
     position: relative;
 }
-
+.help-link{
+    background-color: white;
+}
 ol{
     padding: 2rem;
     font-size: 20px;
