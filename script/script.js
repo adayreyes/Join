@@ -67,7 +67,7 @@ function deleteTask(i) {
   saveInBackend();
 }
 
-setURL('http://gruppe-205.developerakademie.net/smallest_backend_ever');
+setURL('https://aday-reyes.developerakademie.net/smallest_backend_ever');
 
 async function initBackend() {
   await downloadFromServer();
